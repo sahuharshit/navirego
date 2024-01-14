@@ -1,13 +1,12 @@
-import React from "react";
-import CustomCheckbox from "./components/checkbox";
 import "./App.css";
+import CheckboxGroup from "./components/checkbox";
 
-const App: React.FC = () => {
-  const NumOfCheckbox = [0, 1, 2, 3, 4, 5, 6];
+const App = () => {
+  const NumOfCheckbox = [...Array(7).keys()];
   return (
-    <div className="app-container ">
+    <div className="app-container">
       {NumOfCheckbox.map((checkboxNumber) => (
-        <CustomCheckbox key={checkboxNumber} checkboxNumber={checkboxNumber} />
+        <CheckboxGroup key={checkboxNumber} checkboxNumber={checkboxNumber} />
       ))}
     </div>
   );
