@@ -1,5 +1,9 @@
 import axios, { AxiosError, AxiosInstance, AxiosResponse } from "axios";
 import { BASE_URL } from "../../../constants/endpoint";
+import {
+  LetterApiResponse,
+  LetterData,
+} from "../../interfaces/responseInterface";
 
 export const axiosInstance: AxiosInstance = axios.create({
   baseURL: BASE_URL,
@@ -11,7 +15,7 @@ axiosInstance.interceptors.request.use((config) => {
 });
 
 axiosInstance.interceptors.response.use(
-  (response: AxiosResponse) => response,
+  (response: AxiosResponse<LetterData>) => response,
   (error: AxiosError) => {
     if (error.response && error.response.data) {
       console.log(error);
