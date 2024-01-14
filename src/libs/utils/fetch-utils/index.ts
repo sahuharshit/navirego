@@ -1,9 +1,6 @@
 import axios, { AxiosError, AxiosInstance, AxiosResponse } from "axios";
 import { BASE_URL } from "../../../constants/endpoint";
-import {
-  LetterApiResponse,
-  LetterData,
-} from "../../interfaces/responseInterface";
+import { LetterData } from "../../interfaces/responseInterface";
 
 export const axiosInstance: AxiosInstance = axios.create({
   baseURL: BASE_URL,

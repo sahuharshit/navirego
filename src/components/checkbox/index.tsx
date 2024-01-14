@@ -13,7 +13,7 @@ const CheckboxGroup = ({ checkboxNumber }: ICheckBox) => {
       intervalId = setInterval(() => fetchData(checkboxNumber), 2000);
     }
     return () => clearInterval(intervalId);
-  }, [checkboxNumber, checkvalue, letters]);
+  }, [checkboxNumber, checkvalue, fetchData, letters]);
 
   return (
     <div className="checkbox-container">
