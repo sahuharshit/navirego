@@ -26,7 +26,7 @@ class FetchUtilsClass {
   getRequest = async (url: string) => {
     return axiosInstance.get(url);
   };
-  postRequest = async (url: string, data: any) => {
+  postRequest = async (url: string, data: unknown) => {
     return axiosInstance.post(url, data);
   };
 }
